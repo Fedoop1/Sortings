@@ -34,6 +34,7 @@ namespace Sorts
         {
             int marker = Left;
 
+            //pivot == Right(before 'for')
             for (int index = Left; index <= Right; index++)
             {
                 if(array[index].CompareTo(array[Right]) == -1)
@@ -48,7 +49,9 @@ namespace Sorts
             temp = array[marker];
             array[marker] = array[Right];
             array[Right] = temp;
+            
             return marker;
+            //pivot is marker
         }
     }
 }
